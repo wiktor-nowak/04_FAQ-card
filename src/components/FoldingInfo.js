@@ -1,31 +1,26 @@
 import styles from './FoldingInfo.module.scss';
 import arrow from '../assets/icon-arrow-down.svg';
-import useToggle from './ToggleHook'
+// import { useState } from 'react';
 
-function FoldingInfo(props) {
-    const [isToggled, setIsToggled] = useToggle(props.validState);
-    const item = props.faqItem;
-
-    const unfoldEffect = () => {
-        props.getToggleID(item.id);
-        setIsToggled(true);
-    }
+function FoldingInfo({faqItem,getToggleID}) {
 
     return (
         <div>
             <div
             className={styles.unfold}
-            onClick={unfoldEffect}>
-                <p className={isToggled ? styles.unfoldedText : ''}>
-                    {item.title}
+            onClick={() => getToggleID(faqItem.id)}>
+                <div className={styles.row}>
+                    <p className={faqItem.isToggled ? styles.unfoldedText : null}>
+                            {faqItem.title}
+                        </p>
+                        <img
+                        className={faqItem.isToggled ? styles.unfoldedArrow : null}
+                        src={arrow} alt=''/>
+                </div>
+                <p className={faqItem.isToggled ? styles.showtime : null}
+                    >{faqItem.content}
                 </p>
-                <img
-                className={isToggled ? styles.unfoldedArrow : ''}
-                src={arrow} alt=''/>
             </div>
-            {(isToggled && <p>
-                {item.content}
-            </p>)}
             <hr/>
         </div>
     )
