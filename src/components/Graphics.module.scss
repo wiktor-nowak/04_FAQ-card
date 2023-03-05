@@ -1,14 +1,11 @@
 .imageContainer {
     width: 100%;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
     z-index: 1;
 }
 
 .im {
+    content:url('../assets/illustration-woman-online-mobile.svg');
     width: 80%;
     height: auto;
     position: absolute;
@@ -18,9 +15,55 @@
 }
 
 .bg {
+    content:url('../assets/bg-pattern-mobile.svg');
     position: absolute;
     width: 80%;
     top: 0%;
     left: 50%;
     transform: translate(-50%, 10%);
+}
+
+// import pic from 
+// import backgr from '../assets/bg-pattern-mobile.svg'
+
+.boxgraphics {
+    position: absolute;
+    display: none;
+}
+
+
+@media (min-width: 500px) {
+
+    .imageContainer {
+        width: 50%;
+        position: relative;
+        z-index: 1;
+    }
+
+    .im {
+        content: url('../assets/illustration-woman-online-desktop.svg');
+        width: 80%;
+        height: auto;
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+    }
+    
+    .bg {
+        content: url('../assets/bg-pattern-desktop.svg');
+        position: absolute;
+        width: 80%;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, 10%);
+    }
+    
+    
+    .boxgraphics {
+        position: absolute;
+        display: block;
+    }
+
+
 }
