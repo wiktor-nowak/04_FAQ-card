@@ -1,4 +1,4 @@
-import styles from './Graphics.module.scss';
+import styles from '../styles/GlobalStyles.module.scss';
 // import pic from '../assets/illustration-woman-online-mobile.svg'
 // import backgr from '../assets/bg-pattern-mobile.svg'
 import boxpic from '../assets/illustration-box-desktop.svg'

@@ -28,19 +28,17 @@ function Container() {
     return (
     <div className={globalStyles.container}>
         <Graphics/>
-        <div className={globalStyles.outerContent}>
-            <h1>FAQ</h1>
-            <div className={globalStyles.content}>
-                {data.map((faq) => {
-                        return (
-                            <FoldingInfo
-                            getToggleID={checkForToglle}
-                            key={faq.id}
-                            faqItem={faq}
-                            />
-                        )
-                    })}
-            </div>
+        <h1>FAQ</h1>
+        <div className={globalStyles.content}>
+            {data.map((faq) => {
+                    return (
+                        <FoldingInfo
+                        getToggleID={checkForToglle}
+                        key={faq.id}
+                        faqItem={faq}
+                        />
+                    )
+                })}
         </div>
     </div>
     )
