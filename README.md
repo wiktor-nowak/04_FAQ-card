@@ -1,10 +1,13 @@
 # Getting Started with React with --> Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+App build as a Frontedn Mentor Challange.
 
-App build as a Frontedn Mentor Challange:
+### Link:
+https://wiktor-nowak.github.io/04_FAQ-card/
 
-Two screenshots available below:
+
+### Two screenshots available below:
 
 Web Design: <br>
 ![x1](https://user-images.githubusercontent.com/61024148/223497146-6e7861ff-430f-4eeb-889a-b03109d5ea7a.PNG)
